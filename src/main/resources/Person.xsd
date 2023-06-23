@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://com.soap.project1/gen17"
+           targetNamespace="http://com.soap.project1/gen17" elementFormDefault="qualified">
+
+    <xs:element name="getPersonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personid" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Person" type="tns:Person"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="personid" type="xs:long"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="age" type="xs:int"/>
+            <xs:element name="ville" type="xs:string"/>
+<!--            <xs:element name="monnaie" type="tns:currency"/>-->
+        </xs:sequence>
+    </xs:complexType>
+
+
+<!--    <xs:simpleType name="currency">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GBP"/>
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="PLN"/>
+        </xs:restriction>
+    </xs:simpleType>-->
+</xs:schema>
